@@ -6,14 +6,13 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
-            BankAccount bankAccount = new BankAccount()
-            {
-                AccountNumber = 1,
-                MoneyRemains = 0,
-                AccountType = AccountType.Debit
-            };
+            decimal money = 100;
+            var accountType = AccountType.Credit;
+            BankAccount bankAccount1 = new BankAccount(money);
+            BankAccount bankAccount2 = new BankAccount(accountType);
+            BankAccount bankAccount3 = new BankAccount(money, accountType);
 
-            Console.WriteLine($"AN: {bankAccount.AccountNumber};\nAT: {bankAccount.AccountType};\nYour Money: {bankAccount.MoneyRemains}.");
+            Console.WriteLine("Сейчас нечего вывести");
         }
     }
 }

@@ -6,57 +6,34 @@ namespace BankAccount
 {
     public class BankAccount
     {
-        public static int _iterator = 0;
-        public int AccountNumber
+        private static int _iterator = 0;
+        private int _accountNumber;
+        private readonly decimal _moneyRemains;
+        private readonly AccountType _accountType;
+
+        public BankAccount(decimal balance)
         {
-            get
-            {
-                return _accountNumber;   
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new Exception("Can't be less then 0");
-                }
-                else
-                {
-                    _accountNumber = value;
-                }
-            }
+            CreateAccountNumber();
+            _moneyRemains = balance;
         }
-        
-        public decimal MoneyRemains
+
+        public BankAccount(AccountType accountType)
         {
-            get
-            {
-                return _moneyRemains;
-            }
-            set
-            {
-                _moneyRemains = value;
-            } 
+            CreateAccountNumber();
+            _accountType = accountType;
         }
-        public AccountType AccountType
+
+        public BankAccount(decimal balance, AccountType accountType)
         {
-            get
-            {
-                return _accountType;
-            }
-            set
-            {
-                _accountType = value;
-            }
+            CreateAccountNumber();
+            _moneyRemains = balance;
+            _accountType = accountType;
         }
 
         public void CreateAccountNumber()
         {
             _accountNumber = _iterator;
             _iterator++;
-        }
-
-        private int _accountNumber;
-        private decimal _moneyRemains;
-        private AccountType _accountType;
+        }        
     }
 }
