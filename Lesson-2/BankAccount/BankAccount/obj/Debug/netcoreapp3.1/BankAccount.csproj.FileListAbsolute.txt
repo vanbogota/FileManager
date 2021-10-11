@@ -1,0 +1,14 @@
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.exe
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.deps.json
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.runtimeconfig.json
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.runtimeconfig.dev.json
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.dll
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\bin\Debug\netcoreapp3.1\BankAccount.pdb
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.csproj.AssemblyReference.cache
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.AssemblyInfoInputs.cache
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.AssemblyInfo.cs
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.csproj.CoreCompileInputs.cache
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.dll
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.pdb
+D:\Ваня\GeekBrains\ООП\Lesson-2\BankAccount\BankAccount\obj\Debug\netcoreapp3.1\BankAccount.genruntimeconfig.cache

@@ -6,10 +6,7 @@ namespace BankAccount
 {
     public class BankAccount
     {
-        private int _accountNumber;
-        private decimal _moneyRemains;
-        private AccountType _accountType;
-
+        public static int _iterator = 0;
         public int AccountNumber
         {
             get
@@ -52,5 +49,14 @@ namespace BankAccount
             }
         }
 
+        public void CreateAccountNumber()
+        {
+            _accountNumber = _iterator;
+            _iterator++;
+        }
+
+        private int _accountNumber;
+        private decimal _moneyRemains;
+        private AccountType _accountType;
     }
 }

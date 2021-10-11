@@ -12,6 +12,8 @@ namespace BankAccount
                 MoneyRemains = 0,
                 AccountType = AccountType.Debit
             };
+
+            Console.WriteLine($"AN: {bankAccount.AccountNumber};\nAT: {bankAccount.AccountType};\nYour Money: {bankAccount.MoneyRemains}.");
         }
     }
 }
