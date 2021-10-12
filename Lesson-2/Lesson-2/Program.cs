@@ -6,12 +6,12 @@ namespace Lesson_2
     {
         static void Main(string[] args)
         {
-            //BankAccount bankAccount = new BankAccount();
+            BankAccount bankAccount = new BankAccount(100, AccountType.Credit);
             
-            //Console.WriteLine(
-            //    $"Your AN: {bankAccount.GetAccountNumber()};" +
-            //    $"\nYour AT: {bankAccount.GetAccountType()};" +
-            //    $"\nYour Balance: {bankAccount.GetBalance()} rub.");
+            Console.WriteLine(
+                $"Your AN: {bankAccount.GetAccountNumber()};" +
+                $"\nYour AT: {bankAccount.GetAccountType()};" +
+                $"\nYour Balance: {bankAccount.GetBalance()} rub.");
         }
     }
 }
