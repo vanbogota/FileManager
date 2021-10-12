@@ -11,36 +11,30 @@ namespace Lesson_2
         decimal moneyRemains = 0;
         AccountType accountType = AccountType.Mixed;
 
+        public BankAccount(decimal balance)
+        {
+            CreateAccount();
+            moneyRemains = balance;
+        }
+
+        public BankAccount(AccountType accountType)
+        {
+            CreateAccount();
+            this.accountType = accountType;
+        }
+
+        public BankAccount(decimal balance, AccountType accountType)
+        {
+            CreateAccount();
+            moneyRemains = balance;
+            this.accountType = accountType;
+        }
+
         public void CreateAccount()
         {
             accountNumber = index;
             index++;
         }
-        public void SetAccountNumber(int accountNumber)
-        {
-            this.accountNumber = accountNumber;
-        }
-
-        public int GetAccountNumber()
-        {
-            return accountNumber;
-        }
-        public void SetBalance(decimal money)
-        {
-            moneyRemains = money;
-        }
-
-        public decimal GetBalance()
-        {
-            return moneyRemains;
-        }
-        public void SetAccountType(AccountType accountType)
-        {
-            this.accountType = accountType;
-        }
-        public AccountType GetAccountType()
-        {
-            return accountType;
-        }
+        
     }
 }
