@@ -6,10 +6,16 @@ namespace Lesson_2
 {
     class BankAccount
     {
+        static int index = 0;
         int accountNumber = 0;
         decimal moneyRemains = 0;
         AccountType accountType = AccountType.Mixed;
 
+        public void CreateAccount()
+        {
+            accountNumber = index;
+            index++;
+        }
         public void SetAccountNumber(int accountNumber)
         {
             this.accountNumber = accountNumber;
