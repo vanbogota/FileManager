@@ -35,18 +35,23 @@ namespace Lesson_2
             AccountNumber = Index;
             Index++;
         }
-        //public int GetAccountNumber()
-        //{
-        //    return accountNumber;
-        //}
-        //public decimal GetBalance()
-        //{
-        //    return moneyRemains;
-        //}
-
-        //public AccountType GetAccountType()
-        //{
-        //    return accountType;
-        //}
+        
+        public void GetMoney(decimal summToDiscard)
+        {
+            if (summToDiscard <= MoneyRemains)
+            {
+                MoneyRemains -= summToDiscard;
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough money");
+            }           
+        }
+        
+        public void PushMoney(decimal moneyIncome)
+        {
+            MoneyRemains += moneyIncome;
+        }
+        
     }
 }
