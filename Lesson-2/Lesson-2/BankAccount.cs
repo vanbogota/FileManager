@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lesson_2
 {
-    class BankAccount
+    public class BankAccount
     {
         
         public int AccountNumber { get; set; } = 0;
@@ -52,6 +52,29 @@ namespace Lesson_2
         {
             MoneyRemains += moneyIncome;
         }
+        public void TransactionIn(BankAccount fromAccount, decimal money)
+        {
+            if (fromAccount.MoneyRemains >= money
+                || fromAccount.AccountType == AccountType.Credit
+                || fromAccount.AccountType == AccountType.Mixed)
+            {
+                fromAccount.MoneyRemains -= money;
+                MoneyRemains += money;
+            }
+            else
+            {
+                throw new Exception("Invalid operation. Not enough money.");
+            }
+        }
         
+        public string ForwardString(string str)
+        {
+            string newStr = null;
+            for (int i = str.Length-1; i >= 0; i--)
+            {
+                newStr += str[i];
+            }
+            return newStr;
+        }
     }
 }

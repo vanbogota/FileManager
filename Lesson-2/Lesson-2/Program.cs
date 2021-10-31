@@ -8,10 +8,13 @@ namespace Lesson_2
         {
             BankAccount bankAccount = new BankAccount(100, AccountType.Credit);
             
-            Console.WriteLine(
-                $"Your AN: {bankAccount.AccountNumber};" +
-                $"\nYour AT: {bankAccount.AccountType};" +
-                $"\nYour Balance: {bankAccount.MoneyRemains} rub.");
+            //Console.WriteLine(
+            //    $"Your AN: {bankAccount.AccountNumber};" +
+            //    $"\nYour AT: {bankAccount.AccountType};" +
+            //    $"\nYour Balance: {bankAccount.MoneyRemains} rub.");
+
+            Console.WriteLine(bankAccount.ForwardString("qwerty"));
         }
+
     }
 }
