@@ -30,6 +30,14 @@ namespace Lesson_2
             AccountType = accountType;
         }
 
+        public static bool operator ==(BankAccount bankAccount1, BankAccount bankAccount2)
+        {
+            return bankAccount1.AccountNumber == bankAccount2.AccountNumber;
+        }
+        public static bool operator !=(BankAccount bankAccount1, BankAccount bankAccount2)
+        {
+            return bankAccount1.AccountNumber != bankAccount2.AccountNumber;
+        }
         public void CreateAccount()
         {
             AccountNumber = Index;
@@ -75,6 +83,22 @@ namespace Lesson_2
                 newStr += str[i];
             }
             return newStr;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is BankAccount account &&
+                   AccountNumber == account.AccountNumber &&
+                   AccountType == account.AccountType;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode(); //HashCode.Combine(AccountNumber, MoneyRemains, AccountType);
+        }
+        public override string ToString()
+        {
+            return $"{AccountType} - N{AccountNumber} - V{MoneyRemains}";
         }
     }
 }
