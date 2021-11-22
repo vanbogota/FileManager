@@ -6,14 +6,15 @@ namespace Lesson_2
     {
         static void Main(string[] args)
         {
-            BankAccount bankAccount = new BankAccount(100, AccountType.Credit);
-            
-            //Console.WriteLine(
-            //    $"Your AN: {bankAccount.AccountNumber};" +
-            //    $"\nYour AT: {bankAccount.AccountType};" +
-            //    $"\nYour Balance: {bankAccount.MoneyRemains} rub.");
-
-            Console.WriteLine(bankAccount.ForwardString("qwerty"));
+            BankAccount bankAccount1 = new BankAccount(100, AccountType.Credit);
+            BankAccount bankAccount2 = new BankAccount(100, AccountType.Credit);
+                        
+            //Testing BankAccount
+            Console.WriteLine(bankAccount1.ToString());
+            Console.WriteLine(bankAccount1.GetHashCode());
+            Console.WriteLine(bankAccount2.ToString());
+            Console.WriteLine(bankAccount2.GetHashCode());
+            Console.WriteLine(bankAccount1.Equals(bankAccount2));
         }
 
     }
