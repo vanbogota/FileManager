@@ -8,17 +8,12 @@ namespace FileManager
     class Program
     {
         static void Main(string[] args)
-        {          
-            
-            Files files = new Files();
-
-            Folder folder = new Folder();
-
+        {        
             ConsoleColor color = Console.ForegroundColor;
 
             Console.ForegroundColor = ConsoleColor.Red;
 
-            Console.WriteLine("FILEMANAGER\n");
+            Console.WriteLine("FILEMANAGER\n (для вызова help нажмите F1)\n");
             
             Console.ForegroundColor = color;
             
@@ -27,25 +22,21 @@ namespace FileManager
             string currentDirectory = Directory.GetCurrentDirectory();
 
             while (true)
-            {
-
-                //ConsoleKeyInfo key = Console.ReadKey();
-
-                //if (key.Key == ConsoleKey.F1)
-                //{
-                //    Help();
-                //}
-
+            {                
                 try
-                {                    
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+
                     Console.WriteLine($"~You are in:\n~{currentDirectory}:");
+
+                    Console.ForegroundColor = color;
 
                     string input = Console.ReadLine();
 
                     if (input.ToLowerInvariant() == "q")
                     {
                         break;
-                    }
+                    }                   
 
                     string[] inputArray = input.Split(" ");
                                         
