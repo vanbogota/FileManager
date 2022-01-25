@@ -13,12 +13,10 @@ namespace FileManager
 
             Console.ForegroundColor = ConsoleColor.Red;
 
-            Console.WriteLine("FILEMANAGER\n (для вызова help нажмите F1)\n");
+            Console.WriteLine("FILEMANAGER\n (для вызова help введите h)\n");
             
             Console.ForegroundColor = color;
-            
-            Help();
-                        
+                                    
             string currentDirectory = Directory.GetCurrentDirectory();
 
             while (true)
@@ -36,8 +34,8 @@ namespace FileManager
                     if (input.ToLowerInvariant() == "q")
                     {
                         break;
-                    }                   
-
+                    }
+                    
                     string[] inputArray = input.Split(" ");
                                         
                     switch (inputArray[0].ToLowerInvariant())
@@ -71,6 +69,9 @@ namespace FileManager
                             break;
                         case "cd":
                             currentDirectory = CD(inputArray, currentDirectory);                            
+                            break;
+                        case "h":
+                            Help();
                             break;
                         default:
                             Console.WriteLine("Anknown command. See help.");
@@ -309,17 +310,23 @@ namespace FileManager
             {
                 throw new Exception("Incorrect command. See help.");
             }
-            
-            if (Path.HasExtension(userInput[1]))
-            {
-                Files files = new Files();
-                files.FindWithMask(currentDirectory, userInput[1]);
-            }
-            else
-            {
-                Folder folder = new Folder();
-                folder.FindWithMask(currentDirectory, userInput[1]);
-            }            
+
+            Files files = new Files();
+            files.FindWithMask(currentDirectory, userInput[1]);
+
+            Folder folder = new Folder();
+            folder.FindWithMask(currentDirectory, userInput[1]);
+
+            //if (Path.HasExtension(userInput[1]))
+            //{
+            //    Files files = new Files();
+            //    files.FindWithMask(currentDirectory, userInput[1]);
+            //}
+            //else
+            //{
+            //    Folder folder = new Folder();
+            //    folder.FindWithMask(currentDirectory, userInput[1]);
+            //}            
         }
         //вывод информации по текстовому файлу
         static void Info(string[] userInput, string currentDirectory)
